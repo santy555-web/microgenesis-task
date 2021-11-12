@@ -1,0 +1,149 @@
+<app-navbar></app-navbar>
+<div class="title">Praise</div>
+<div class="main">
+  <div class="box">
+    <div class="card">
+      <div class="home">
+        <div class="title-grade">Grade Statistics</div>
+        <div class="div-cla">
+          <div class="input-wrap">
+            <label class="lable">Select Region</label>
+            <select type="text" class="input-value">
+              <option selected>All</option>
+              <option>data1</option>
+              <option>data2</option>
+              <option>data3</option>
+            </select>
+          </div>
+          <div class="input-wrap">
+            <label class="lable">Select Job Role</label>
+            <select type="text" class="input-value">
+              <option selected>All</option>
+              <option>data1</option>
+              <option>data2</option>
+              <option>data3</option>
+            </select>
+          </div>
+          <div class="input-wrap">
+            <label class="lable">Select From Date</label>
+            <input type="date" class="input-value" />
+          </div>
+          <div class="input-wrap">
+            <label class="lable">Select To Date</label>
+            <input type="date" class="input-value" />
+          </div>
+          <p><strong>...</strong></p>
+        </div>
+      </div>
+      <div class="card_description">
+        <app-barchart></app-barchart>
+      </div>
+    </div>
+  </div>
+  <div class="overrude_request">
+    <div class="container">
+      <div class="small-card">
+        <div class="title-small-card">Overdue Request</div>
+        <div class="buttons">
+          <button class="slider-btn"><i class="fa fa-chevron-left"></i></button>
+          <button class="slider-btn">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-small-request" *ngFor="let item of smallCard">
+          <div class="inner-card">
+            <div class="name-items">
+              <span class="logo"><i class="fa fa-user"></i></span>
+              <div>
+                <h4 class="name">{{ item.name }}</h4>
+                <p>{{ item.position }}</p>
+              </div>
+            </div>
+            <div class="subname">
+              <h5>{{ item.date }}</h5>
+              <small>{{ item.requested }}</small>
+            </div>
+            <div class="buttons">
+              <span class="btn"><i class="fa fa-times"></i></span>
+              <span class="btn"><i class="fa fa-check"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btns">
+  <div class="all-btns">
+    <button class="recycle-1"><i class="fa fa-user"></i> Review Cycle</button>
+    <button class="recycle"><i class="fa fa-users"></i> Participents</button>
+    <button class="recycle">
+      <i class="far fa-clipboard"></i> Questionnaires
+    </button>
+  </div>
+  <div class="input-wrap">
+    <label class="lable">Select Year</label>
+    <select type="text" class="input-value">
+      <option selected>2021</option>
+      <option>2020</option>
+      <option>2019</option>
+      <option>2018</option>
+    </select>
+  </div>
+</div>
+<div class="small-card-section">
+  <div class="btn-wrap">
+    <div class="btn-inputs">
+      <button class="btn"><i class="fa fa-plus"></i> Create New</button>
+    </div>
+    <div class="input-group">
+      <div class="input-select">
+        <label class="lable">Show</label>
+        <select type="text" class="input-value">
+          <option selected>All</option>
+          <option>Completed</option>
+          <option>Remain</option>
+          <option>Cancle</option>
+        </select>
+      </div>
+      <button class="slider-btn"><i class="fa fa-chevron-left"></i></button>
+      <button class="slider-btn"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card" *ngFor="let item of cardData">
+      <div class="card-info">
+        <div class="card-text">
+          <div class="date-wrapper">
+            <span class="date">{{ item.date }}</span>
+            <p>{{ item.period }}</p>
+          </div>
+          <div class="status success">{{ item.status }}</div>
+        </div>
+        <div class="img-wrap">
+          <p>Assigned Participents <span>See All</span></p>
+          <div class="img-content">
+          <img class="img" src="{{ item.logo }}" alt="logo" />
+          <button class="btn"><i class="fa fa-plus"></i> add</button>
+        </div>
+      </div>
+        <div class="total" *ngIf="item.date =='August, 2021'">
+          <p class="completed">{{ item.completed }} <span>completed</span></p>
+          <p class="completed">{{ item.overdue }}<span>  overdue </span></p>
+          <p class="completed">{{ item.Requested }} <span>requested</span></p>
+        </div>
+        <div class="total" *ngIf="item.date =='Sept, 2021'">
+          <p class="completed"> <span>completed</span></p>
+          <p class="completed">0/704<span>  </span> </p>
+          <p class="completed"> <i class="fa fa-chevron-right"></i></p>
+        </div>
+        <div class="btn-card" *ngIf="item.date !='Sept, 2021' && item.date !=='August, 2021'">
+        <button class="dte-btn"> <i class="fa fa-trash-alt"></i>  delete</button>
+        <button class="edit-btn"><i class="fa fa-edit"></i> edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

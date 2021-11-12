@@ -1,0 +1,141 @@
+<!-- <div class="main">
+  <div class="dashboard">
+    <div [ngClass]="[toggle ? 'sidebar fliph' : 'sidebar']">
+      <div class="bar-btn"></div>
+      <ul class="list-sidebar">
+        <li>
+            <a
+            *ngIf="toggle"
+              class="nav-link angle"
+              (click)="setToggle()" >
+              <i class="fas fa-angle-double-right"></i>
+            </a>
+            <a
+            *ngIf="!toggle"
+              class=" nav-link angle"
+              (click)="setToggle()"
+            >
+              <i class="fas fa-angle-double-left"></i>
+            </a>
+        </li>
+        <li>
+          <a routerLink="/home" routerLinkActive="active" class="collapsed nav-link">
+            <i class="fas fa-home"></i>
+            <span class="nav-label"> Home</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fab fa-medapps"></i>
+            <span class="nav-label"> New Idea</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-label"> Graduation</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-chart-bar"></i>
+            <span class="nav-label"> statistics</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-mobile-alt"></i>
+            <span class="nav-label"> enquiry</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-award"></i>
+            <span class="nav-label"> awards</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="nav-label"> schedule</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-user-cog"></i>
+            <span class="nav-label"> user</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+   <div class="container-right">
+      <router-outlet></router-outlet>
+   </div>
+  </div>
+</div> -->
+<body>
+  <input type='checkbox' id='menu_active' checked/>
+  <div id='wrapper' class='active'>
+    <div id='menu'>
+      <span ></span>
+      <ul>
+        <li>
+          <a id='site-name' class="collapsed nav-link">
+            <label for='menu_active'><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></label>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/home" routerLinkActive="active" class="collapsed nav-link">
+            <i class="fas fa-home"></i>
+            <span class="nav-label"> Home</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fab fa-medapps"></i>
+            <span class="nav-label"> New Idea</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="nav-label"> Graduation</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-chart-bar"></i>
+            <span class="nav-label"> statistics</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-mobile-alt"></i>
+            <span class="nav-label"> enquiry</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-award"></i>
+            <span class="nav-label"> awards</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="nav-label"> schedule</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-user-cog"></i>
+            <span class="nav-label"> user</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id='page-content'>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>

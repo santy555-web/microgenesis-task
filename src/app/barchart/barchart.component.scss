@@ -1,0 +1,40 @@
+.barchart {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  .chartjs-render-monitor {
+    animation: chartjs-render-animation 0.001s;
+    background: blue;
+    border-radius: 12px;
+    text-decoration: none;
+    padding: 10px;
+    width: 316px !important;
+    height: 220px !important;
+  }
+  .title {
+    color: #fff;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .barchart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    .chartjs-render-monitor {
+      animation: chartjs-render-animation 0.001s;
+      background: blue;
+      border-radius: 12px;
+      text-decoration: none;
+      padding: 10px;
+      width: 240px !important;
+      height: 170px !important;
+    }
+    .title {
+      color: #fff;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="barchart">
+  <div class="large-chart">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [colors]="barChartColors"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+        <div class="title">Average of Overall paricipent score for each month by grade wise</div>
+      </div>
+   <div class="small-chart">
+      <canvas baseChart
+      [datasets]="barChartDataSmall"
+      [labels]="barChartLabelsSmall"
+      [options]="barChartOptionsSmall"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+    <div class="title">Overall Average</div>
+  </div>
+</div>
