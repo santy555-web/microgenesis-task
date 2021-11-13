@@ -20,6 +20,7 @@
     "@angular/router": "~12.2.0",
     "ng2-charts": "^2.4.3",
     "rxjs": "~6.6.0",
+    "swiper": "^7.2.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

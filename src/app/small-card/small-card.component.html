@@ -1,0 +1,29 @@
+<swiper
+      #swiperRef
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [navigation]="true"
+      [virtual]="true"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide  class="card-small-request" *ngFor="let item of smallCard">
+          <div class="inner-card">
+            <div class="name-items">
+              <span class="logo"><i class="fa fa-user"></i></span>
+              <div>
+                <h4 class="name">{{ item.name }}</h4>
+                <p>{{ item.position }}</p>
+              </div>
+            </div>
+            <div class="subname">
+              <h5>{{ item.date }}</h5>
+              <small>{{ item.requested }}</small>
+            </div>
+            <div class="buttons">
+              <span class="btn"><i class="fa fa-times"></i></span>
+              <span class="btn"><i class="fa fa-check"></i></span>
+            </div>
+          </div>
+      </ng-template>
+    </swiper>
+

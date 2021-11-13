@@ -1,0 +1,112 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  position: block !important;
+  top: 0;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  font-size: 22px !important;
+  background: black;
+}
+.swiper-rtl .swiper-button-next:after {
+  content: "next";
+  font-size: 22px !important;
+  background: black;
+}
+.card-small-request {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #cfbebe;
+  overflow: hidden;
+  width: 258px !important;
+  margin-right: 34px !important;
+  margin-left: 20px !important;
+  .inner-card {
+    padding: 20px;
+    .name-items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 1px solid #9ea3b0;
+      .logo {
+        width: 28px;
+        height: 28px;
+        background-color: #8c7eff;
+        margin: 5px;
+        padding: 16px;
+        border-radius: 50%;
+        .fa {
+          font-size: 30px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.card-body {
+  font: 1em sans-serif;
+}
+.inner-card p {
+  font-size: 13px;
+}
+.subname h5 {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.subname {
+  padding: 5px;
+  border-bottom: 1px solid #9ea3b0;
+}
+.subname small {
+  margin: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 0px 20px;
+  .btn {
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

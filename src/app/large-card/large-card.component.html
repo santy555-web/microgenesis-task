@@ -1,0 +1,49 @@
+<swiper
+#swiperRef
+[slidesPerView]="3"
+[spaceBetween]="30"
+[navigation]="true"
+[virtual]="true"
+class="mySwiper"
+>
+
+<ng-template swiperSlide class="card-large" *ngFor="let item of cardData">
+  <div class="card-container">
+      <div class="card-info">
+        <div class="card-text">
+          <div class="date-wrapper">
+            <span class="date">{{ item.date }}</span>
+            <p>{{ item.period }}</p>
+          </div>
+          <div class="status success">{{ item.status }}</div>
+        </div>
+        <div class="img-wrap">
+          <p>Assigned Participents <span>See All</span></p>
+          <div class="img-content">
+            <img class="img" src="{{ item.logo }}" alt="logo" />
+            <button class="btn"><i class="fa fa-plus"></i> add</button>
+          </div>
+        </div>
+        <div class="total" *ngIf="item.date == 'August, 2021'">
+          <p class="completed">{{ item.completed }} <span>completed</span></p>
+          <p class="completed">{{ item.overdue }}<span> overdue </span></p>
+          <p class="completed">{{ item.Requested }} <span>requested</span></p>
+        </div>
+        <div class="total" *ngIf="item.date == 'Sept, 2021'">
+          <p class="completed"><span>completed</span></p>
+          <p class="completed">0/704<span> </span></p>
+          <p class="completed"><i class="fa fa-chevron-right"></i></p>
+        </div>
+        <div
+          class="btn-card"
+          *ngIf="item.date != 'Sept, 2021' && item.date !== 'August, 2021'"
+        >
+          <button class="dte-btn">
+            <i class="fa fa-trash-alt"></i> delete
+          </button>
+          <button class="edit-btn"><i class="fa fa-edit"></i> edit</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</swiper>

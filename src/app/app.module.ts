@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { BarchartComponent } from './barchart/barchart.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ChartsModule } from 'ng2-charts';
+import { SwiperModule } from "swiper/angular";
+import { SmallCardComponent } from './small-card/small-card.component';
+import { LargeCardComponent } from './large-card/large-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +19,16 @@ import { ChartsModule } from 'ng2-charts';
     PageNotFoundComponent,
     NavbarComponent,
     HomeComponent,
+
     BarchartComponent,
+     SmallCardComponent,
+     LargeCardComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ChartsModule,
+    SwiperModule,
     AppRoutingModule
   ],
   providers: [],
