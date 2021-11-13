@@ -2,14 +2,15 @@
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
-  color: #504a4af7;
+  color: #333333c7 !important;
   margin-top: 20px;
   margin-bottom: -39px;
   margin-left: 30px;
 }
 .title-grade {
   font-weight: normal;
-  text-transform: uppercase;
+  color: #333333c7 !important;
+  font-size: initial;
 }
 .main {
   display: flex;
@@ -40,7 +41,7 @@
       margin-right: 10px;
       .lable {
         font-size: 14px;
-        color: #757575;
+        color: #3a1f1f;
       }
       select {
         border: none;
@@ -76,8 +77,13 @@
         background: #ffc9c994;
         margin: 24px 10px 0px 10px;
         padding: 5px;
+        cursor: pointer;
       }
-    }}
+      &.active{
+        background: #25259b;
+      }
+    }
+  }
 }
 .box {
   max-width: 100%;
@@ -126,12 +132,14 @@
       .div-cla {
         display: flex;
         flex-flow: wrap;
+        margin-right: 10px;
         .input-wrap {
           display: flex;
           flex-direction: column;
           margin: 0 5px;
           .lable {
-            font-size: 10px;
+            font-size: 12px;
+            margin-bottom: 5px;
           }
           .input-value {
             width: 100px;
@@ -177,10 +185,15 @@
       }
       .buttons {
         .slider-btn {
-          border-radius: 10px;
+          border-radius: 5px;
           border: none;
+          margin: 10px;
           background: #ffc9c994;
           padding: 5px;
+          cursor: pointer;
+        }
+        &.active{
+          background: #25259b !important;
         }
       }
     }
@@ -257,15 +270,19 @@
     .recycle {
       background-color: #fff;
       padding: 10px;
-      color: #757575;
+      color: #75757594 !important;
       border: none;
       border-radius: 5px 5px 0 0;
       border-right: 1px solid #ffc9c9;
+      .fa, .far{
+        color: #75757594 !important;
+      }
     }
     .recycle-1 {
       background-color: #fff;
       padding: 10px;
       border: none;
+      color: #333;
       border-radius: 5px 5px 0 0;
       border-right: 1px solid #ffc9c9;
     }
@@ -299,8 +316,8 @@
     justify-content: space-between;
     .btn-inputs {
       .btn {
-        background-color: #8c7eff;
-        padding: 5px 12px;
+        background-image: linear-gradient(to right, #37b3ad 0%, #5f78d3 51%, #4f6cd7 100%);
+        padding: 5px 42px;
         border: none;
         border-radius: 5px;
         margin: 10px 0;
@@ -325,11 +342,15 @@
       }
     }
     .slider-btn {
-      border-radius: 10px;
+      border-radius: 5px;
       border: none;
       background: #ffc9c994;
       margin: 24px 10px 0px 10px;
       padding: 5px;
+      cursor: pointer;
+    }
+    &.active{
+      background: #25259b;
     }
   }
   .container {
@@ -444,6 +465,9 @@
             color: #fff;
             margin: 10px;
             border-radius: 5px;
+            .fa{
+              color: #fff;
+            }
           }
           .edit-btn {
             background-color: #ff9800;
@@ -452,6 +476,9 @@
             margin: 10px;
             color: #fff;
             border-radius: 5px;
+            .fa{
+              color: #fff;
+            }
           }
         }
       }
